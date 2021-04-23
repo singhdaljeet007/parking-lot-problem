@@ -52,6 +52,6 @@ describe('Full Parking Lot', () => {
         expect(commandProcessor('park ' + carRegFour)).toBe('Sorry, parking lot is full')
     })
     test('leave cars', () => {
-        expect(commandProcessor('leave ' + carRegThree+' 5')).toBe(`Registration number ${carRegThree} with Slot Number 3 is free with Charge 50`)
+        expect(commandProcessor('leave ' + carRegThree+' 5')).toBe(`Registration number ${carRegThree} with Slot Number 3 is free with Charge 40`)
     })
 })

@@ -9,4 +9,6 @@ if (args && args.length) {
         var arr = data ? data.split('\n') : [];
         arr.forEach(input => console.log(commandProcessor(input)));
     })
+}else{
+    console.log("Invalid file input")
 }
