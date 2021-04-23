@@ -11,4 +11,7 @@ touch src/index.ts bin/parking_lot bin/setup
 # RUN
 bash bin/parking_lot
 
+# adding command processor
+touch commandProcessor.ts
+
 
