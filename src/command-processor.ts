@@ -11,7 +11,7 @@ export function commandProcessor(input: string): string {
         case 'leave':
             return leave(params[1], +params[2]);
         case 'status':
-            return 'Parking Lot status'
+            return getParkingLotStatus();
         default:
             return 'Invalid input'
     }
@@ -39,4 +39,9 @@ function leave(registrationNo: string, hours: number): string {
     let leave = parkingLot.leave(slot);
     let parkingCharges = (hours > 2) ? 10 + ((hours - 2) * 10) : 10;
     return `Registration number ${registrationNo} with Slot Number ${slot+1} is free with Charge ${parkingCharges}`
+}
+
+function getParkingLotStatus() {
+    let status = parkingLot.getParkingLotStatus();
+    return status;
 }

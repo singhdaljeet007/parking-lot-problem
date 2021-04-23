@@ -28,6 +28,17 @@ export class ParkingLot{
         return delete this.slots[slot];
     }
 
+    public getParkingLotStatus() {
+        let status:string = "Slot\tRegistration No.\n";
+        this.slots.forEach((registrationNo,index)=>{
+            status+= index+1 +"\t"+registrationNo;
+            if(index<this.slots.length-1){
+                status+="\n";
+            }
+        })
+        return status;
+    }
+
     public getCarSlotForRegistrationNumber(regNo: string): number | -1 {
         return this.slots.findIndex(elem=>elem==regNo);
     }
