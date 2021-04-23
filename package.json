@@ -5,13 +5,25 @@
   "main": "index.js",
   "scripts": {
     "parking-lot": "./node_modules/ts-node/dist/bin.js src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "author": "Daljeet Singh",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^26.0.22",
     "@types/node": "^14.14.41",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.5",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/tests"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "coverageDirectory": "<rootDir>/tests/coverageReport"
   }
 }
