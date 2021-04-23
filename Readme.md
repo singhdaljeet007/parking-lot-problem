@@ -16,3 +16,7 @@ touch ParkingLot.ts
 ###### test cases
 mkdir tests
 npm i --save-dev jest ts-jest @types/jest
+
+
+###### Ready to go
+bash bin/parking-lot

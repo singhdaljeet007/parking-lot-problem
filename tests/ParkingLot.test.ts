@@ -33,4 +33,11 @@ describe('when parking full', () => {
         expect(parkingLot.getCarSlotForRegistrationNumber(carRegTwo)).toBe(1)
         expect(parkingLot.getCarSlotForRegistrationNumber(carRegThree)).toBe(-1)
     })
+    test('park', () => {
+        expect(parkingLot.park(carRegThree)).toBe(-1)
+    })
+    test('leave', () => {
+        expect(parkingLot.leave(3)).toBe(false)
+        expect(parkingLot.leave(1)).toBe(true)
+    })
 })
