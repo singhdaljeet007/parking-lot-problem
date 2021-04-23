@@ -1,0 +1,2 @@
+DIR="/Users/apple/Documents/parking-lot"
+$DIR/node_modules/ts-node/dist/bin.js $DIR/src/index.ts $1

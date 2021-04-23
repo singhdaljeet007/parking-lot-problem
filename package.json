@@ -4,8 +4,14 @@
   "description": "Parking Lot Assignment",
   "main": "index.js",
   "scripts": {
+    "parking-lot": "./node_modules/ts-node/dist/bin.js src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daljeet Singh",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
 }
