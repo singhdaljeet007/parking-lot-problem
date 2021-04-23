@@ -1,10 +1,11 @@
-export class ParkingLot{
-    private totalSlots:number;
+export class ParkingLot 
+{
+    private totalSlots: number;
     private slots:Array<string> = [];
     private nextAvailableSlot: number = 0
 
-    constructor(slots:number){
-        this.totalSlots=slots;
+    constructor(totalSlots: number) {
+        this.totalSlots = totalSlots;
     }
 
     private getNextAvailableSlot(currentSlot: number): number {
@@ -17,6 +18,9 @@ export class ParkingLot{
     }
 
     public park(registrationNo: string): number {
+        if(this.nextAvailableSlot==-1){
+            return -1;
+        }
         let assignedSlot = this.nextAvailableSlot;
         this.slots[assignedSlot] = registrationNo;
         this.nextAvailableSlot = this.getNextAvailableSlot(assignedSlot)
@@ -32,6 +36,9 @@ export class ParkingLot{
     }
 
     public getParkingLotStatus() {
+        if(this.slots.length==0){
+            return 'No cars parked';
+        }
         let status:string = "Slot\tRegistration No.\n";
         this.slots.forEach((registrationNo,index)=>{
             status+= index+1 +"\t"+registrationNo;
