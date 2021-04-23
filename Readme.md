@@ -8,5 +8,7 @@ npm i --save-dev typescript @types/node ts-node
 mkdir bin src
 touch src/index.ts bin/parking_lot bin/setup
 
+# RUN
+bash bin/parking_lot
 
 
