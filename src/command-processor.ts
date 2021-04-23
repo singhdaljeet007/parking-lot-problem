@@ -38,7 +38,7 @@ function leave(registrationNo: string, hours: number): string {
     let slot = parkingLot.getCarSlotForRegistrationNumber(registrationNo);
     let leave = parkingLot.leave(slot);
     let parkingCharges = (hours > 2) ? 10 + ((hours - 2) * 10) : 10;
-    return `Registration number ${registrationNo} with Slot Number ${slot+1} is free with Charge ${parkingCharges}`
+    return `Registration number ${registrationNo} with Slot Number ${slot+1} is free with Charge ${parkingCharges}`;
 }
 
 function getParkingLotStatus() {
