@@ -56,6 +56,6 @@ function getParkingLotStatus() {
     if (!parkingLot) {
         return 'No Parking Lot Created'
     }
-    let status = parkingLot.getParkingLotStatus();
+    let status = parkingLot.getParkingLotStatus().trim();
     return status;
 }

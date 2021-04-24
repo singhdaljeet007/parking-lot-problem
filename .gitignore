@@ -1,3 +1,4 @@
 /node_modules
 /tests/coverageReport
 .DS_Store
+functional_spec/.rspec_status
