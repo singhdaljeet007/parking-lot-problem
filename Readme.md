@@ -19,4 +19,5 @@ npm i --save-dev jest ts-jest @types/jest
 
 
 ###### Ready to go
-bash bin/parking-lot
+bin/setup
+bin/parking-lot file_inputs.txt
