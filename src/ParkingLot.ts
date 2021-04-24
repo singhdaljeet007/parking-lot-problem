@@ -39,10 +39,10 @@ export class ParkingLot
         if(this.slots.length==0){
             return 'No cars parked';
         }
-        let status:string = "Slot\tRegistration No.\n";
+        let status:string = "Slot No.\tRegistration No.\n";
         this.slots.forEach((registrationNo,index)=>{
             status+= index+1 +"\t"+registrationNo;
-            if(index<this.slots.length-1){
+            if(index<this.slots.length-2){
                 status+="\n";
             }
         })

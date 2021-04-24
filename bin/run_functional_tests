@@ -1,0 +1,5 @@
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+FUNCTIONAL_SPEC_DIR=$DIR/../functional_spec
+cd $FUNCTIONAL_SPEC_DIR
+bundle install
+bundle exec rake spec:functional
